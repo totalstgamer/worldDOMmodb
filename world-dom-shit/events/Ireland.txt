@@ -1,0 +1,58 @@
+add_namespace = ireland
+
+country_event = {
+	id = ireland.1
+	title = ireland.1.t
+	desc = ireland.1.d
+	picture = GFX_report_event_customs_raid
+	
+	is_triggered_only = no
+	fire_only_once = yes
+
+
+	trigger = {
+	    tag = IRE
+	    AND = {
+	        date > 1936.2.1
+	    }
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = ireland.1.a
+		ai_chance = {factor = 90}
+		add_political_power = -50
+		}
+	}        
+	option = {
+		name = ireland.1.b
+		ai_chance = {factor = 10}
+		}
+	}
+ }
+
+country_event = {
+	id = ireland.2
+	title = ireland.2.t
+	desc = ireland.2.d
+	picture = GFX_report_event_customs_raid
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = ireland.2.a
+		ai_chance = {factor = 90}
+		start_civil_war = {
+		    ideology = neutrality
+		    ruling_party = democratic
+		}
+	}        
+	option = {
+		name = ireland.2.b
+		ai_chance = {factor = 10}
+        add_stability = 0.10
+		}
+	}
+ }

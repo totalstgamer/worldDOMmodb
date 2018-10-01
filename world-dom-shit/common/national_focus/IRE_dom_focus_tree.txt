@@ -1,0 +1,480 @@
+focus_tree = { 
+id = dom_focus_tree
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = IRE 
+} 
+} 
+#Focus for Strengthen Shane's Power
+focus = { 
+id = IRE_strengthenshanespower
+icon = GFX_goal_unknown
+x = 20
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_keepshane } 
+ai_will_do = { 
+ factor = 1
+ }  
+completion_reward = { 
+add_stability = 0.05
+add_popularity = { 
+ideology = neutrality 
+popularity = 0.03 
+}
+ } 
+
+ } 
+
+#Focus for Keep Shane
+focus = { 
+id = IRE_keepshane
+icon = GFX_goal_unknown
+x = 20
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_shanesinactivityproblem } 
+mutually_exclusive = { focus = IRE_getridofshane } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_popularity = { 
+ideology = neutrality 
+popularity = 0.05 
+}
+ } 
+
+ } 
+
+#Focus for Get Rid Of Shane
+focus = { 
+id = IRE_getridofshane
+icon = GFX_goal_unknown
+x = 13
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_shanesinactivityproblem } 
+mutually_exclusive = { focus = IRE_keepshane } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_popularity = { 
+ideology = neutrality 
+popularity = -0.1 
+}
+ } 
+
+ } 
+
+#Focus for Shane's Inactivity Problem
+focus = { 
+id = IRE_shanesinactivityproblem
+icon = GFX_goal_unknown
+x = 17
+y = 1
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power = 50
+ } 
+
+ } 
+
+#Focus for Ultimatum To Shane!
+focus = { 
+id = IRE_ultimatumtoshane
+icon = GFX_goal_unknown
+x = 13
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_getridofshane } 
+ai_will_do = { 
+ factor = 1
+ }
+ completion_reward = {
+    IRE = { country_event = { id = ireland.2 } }
+ } 
+
+ } 
+
+#Focus for Hand Control to the SA's
+focus = { 
+id = IRE_handcontroltothesas
+icon = GFX_goal_unknown
+x = 16
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_ultimatumtoshane } 
+mutually_exclusive = { focus = IRE_thealternatives } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_popularity = { 
+ideology = democratic 
+popularity = 0.15 
+}
+ } 
+
+ } 
+
+#Focus for SA Oligarchs
+focus = { 
+id = IRE_saoligarchs
+icon = GFX_goal_unknown
+x = 19
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_strengthenshanespower } 
+mutually_exclusive = { focus = IRE_abolishthesas } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Abolish the SA's
+focus = { 
+id = IRE_abolishthesas
+icon = GFX_goal_unknown
+x = 21
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_strengthenshanespower } 
+mutually_exclusive = { focus = IRE_saoligarchs } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for One man Staff team
+focus = { 
+id = IRE_onemanstaffteam
+icon = GFX_goal_unknown
+x = 21
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_abolishthesas } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Spheres of Staff
+focus = { 
+id = IRE_spheresofstaff
+icon = GFX_goal_unknown
+x = 19
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_saoligarchs } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Switch Neon for Reilly
+focus = { 
+id = IRE_switchneonforreilly
+icon = GFX_goal_unknown
+x = 19
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_spheresofstaff } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Abolish all Remaining Rules
+focus = { 
+id = IRE_abolishallremainingrules
+icon = GFX_goal_unknown
+x = 21
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_onemanstaffteam } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Ban Anyone Who Disagrees
+focus = { 
+id = IRE_bananyonewhodisagrees
+icon = GFX_goal_unknown
+x = 20
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_abolishallremainingrules focus = IRE_switchneonforreilly } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Choose Dogfood
+focus = { 
+id = IRE_choosedogfood
+icon = GFX_goal_unknown
+x = 11
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_chooseansa } 
+mutually_exclusive = { focus = IRE_chooseneon } 
+mutually_exclusive = { focus = IRE_choosepaddy } 
+mutually_exclusive = { focus = IRE_choosekavineo } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for More Democracy
+focus = { 
+id = IRE_moredemocracy
+icon = GFX_goal_unknown
+x = 17
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_handcontroltothesas } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Choose an SA
+focus = { 
+id = IRE_chooseansa
+icon = GFX_goal_unknown
+x = 14
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_handcontroltothesas } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Form the Council
+focus = { 
+id = IRE_formthecouncil
+icon = GFX_goal_unknown
+x = 13
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_chooseneon } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Banning total and neon
+focus = { 
+id = IRE_banningtotalandneon
+icon = GFX_goal_unknown
+x = 15
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_choosekavineo } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Inactivity is Now Allowed
+focus = { 
+id = IRE_inactivityisnowallowed
+icon = GFX_goal_unknown
+x = 9
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_choosepaddy } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Choose Kavineo
+focus = { 
+id = IRE_choosekavineo
+icon = GFX_goal_unknown
+x = 15
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_chooseansa } 
+mutually_exclusive = { focus = IRE_chooseneon } 
+mutually_exclusive = { focus = IRE_choosepaddy } 
+mutually_exclusive = { focus = IRE_choosedogfood } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Choose Paddy
+focus = { 
+id = IRE_choosepaddy
+icon = GFX_focus_inactive_paddy
+x = 9
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_chooseansa } 
+mutually_exclusive = { focus = IRE_choosedogfood } 
+mutually_exclusive = { focus = IRE_chooseneon } 
+mutually_exclusive = { focus = IRE_choosekavineo } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Annexing Latvia
+focus = { 
+id = IRE_annexinglatvia
+icon = GFX_goal_unknown
+x = 11
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_choosedogfood } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Choose Neon
+focus = { 
+id = IRE_chooseneon
+icon = GFX_goal_unknown
+x = 13
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_chooseansa } 
+mutually_exclusive = { focus = IRE_choosepaddy } 
+mutually_exclusive = { focus = IRE_choosekavineo } 
+mutually_exclusive = { focus = IRE_choosedogfood } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Vote on EVERYTHINNGG!
+focus = { 
+id = IRE_voteoneverythinngg
+icon = GFX_goal_unknown
+x = 17
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_moredemocracy } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Alternatives
+focus = { 
+id = IRE_thealternatives
+icon = GFX_goal_unknown
+x = 5
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_ultimatumtoshane } 
+mutually_exclusive = { focus = IRE_handcontroltothesas } 
+ai_will_do = { 
+ factor = 1
+ }
+completion_reward = { 
+add_popularity = { 
+ideology = communism 
+popularity = 0.05
+}
+add_popularity = { 
+ideology = fascism 
+popularity = 0.05
+}
+ } 
+
+ } 
+
+#Focus for Total's Coup
+focus = { 
+id = IRE_totalscoup
+icon = GFX_goal_unknown
+x = 3
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_thealternatives } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Joshernaut's Return
+focus = { 
+id = IRE_joshernautsreturn
+icon = GFX_goal_unknown
+x = 7
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IRE_thealternatives } 
+ai_will_do = { 
+ factor = 1
+ }
+completion_reward = { 
+add_popularity = { 
+ideology = communism
+popularity = 0.15 
+}
+ } 
+
+ } 
+
+#End of focuses 
+ }
